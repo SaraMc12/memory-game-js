@@ -17,8 +17,20 @@ function flipCard(){
         hasFlippedCard = false;
         secondCard= this;
     
-    // How to check if the cards are a match
+    // if the cards are a match
     
+    if(firstCard.dataset.framework === secondCard.dataset.framework){
+        firstCard.removeEventListener("click", flipCard);
+        secondCard.removeEventListener("click", flipCard);
+    }else{
+        // if they dont match
+        setTimeout(() => {
+            
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+        
+    }, 3000);
+    }
        
     
     }
