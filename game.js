@@ -51,10 +51,10 @@ function unflip(){
     }, 3000);
 }
 
-function resetGameBoard(){
-    [hasFlippedCard = lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
-}
+// function resetGameBoard(){
+    // [hasFlippedCard = lockBoard] = [false, false];
+    // [firstCard, secondCard] = [null, null];
+// }
 
 (function shuffle(){
     cards.forEach(card =>{
