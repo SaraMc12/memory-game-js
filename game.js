@@ -6,7 +6,7 @@ let firstCard, secondCard;
 
 function flipCard() {
     if (lockBoard) return;
-
+    if (this === firstCard) return;
     this.classList.toggle('flip');
     // when first card is clicked
 
@@ -50,4 +50,16 @@ function unflip(){
         lockBoard = false;
     }, 3000);
 }
+
+function resetGameBoard(){
+    [hasFlippedCard = lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
+
+(function shuffle(){
+    cards.forEach(card =>{
+        let randomPosition = Math.floor(Math.random() * 12);
+        card.style.order = randomPosition;
+    })
+})();
 cards.forEach(card => card.addEventListener('click', flipCard));
