@@ -5,6 +5,17 @@
     box-sizing: border-box;
 }
 
+.sound{
+    height:50px;
+    width:100px;
+}
+
+#title{
+    font-family: 'Lobster Two', cursive;
+    color:lightseagreen;
+    text-align: center
+}
+
 body{
     height: 100vh;
     background-image: url(https://donuts.lexblog.com/files/2017/10/ThinkstockPhotos-616855036-550x368.jpg); 
